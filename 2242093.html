@@ -9,7 +9,7 @@
     2242093 肥後魁陽
 <HR>
 <TABLE border="1">
-<TR> <TD onclick="puery1()">住所検索(部分一致)</TD> <TD onclick="puery2()">郵便番号検索(完全一致)</TD> </TR>
+<TR> <TD onClick="puery1()">住所検索(部分一致)</TD> <TD onClick="puery2()">郵便番号検索(完全一致)</TD> </TR>
 <TR> <TD ID="out" colspan="2">検索結果はここに表示されます</TD> </TR>
 </TABLE>
 <hr>
@@ -28,17 +28,17 @@
  var output = 見つかりませんでした; // 検索結果を入れる変数
  var n = zipdb.length; //検索対象の配列の大きさ
  for(i = 0; i < zipdb.length; ++i) {
- if( zipdb[i]['address'].match(input)){ //　入力がi番のデータと部分一致かどうか判定
- result zipdb[i]['zip'] + zipdb[i]['address'];
+ if( zipdb[i]['address'].match(input) ){ //　入力がi番のデータと部分一致かどうか判定
+ result = zipdb[i]['zip'] + zipdb[i]['address'];
  break; // 最も内側の for ループから抜け出す
  }
 }
- document.getElementById('out').innerHTML = result; //検索結果を out の ID を持つ要素に書
+ document.getElementById('out').innerHTML = result; //検索結果を out の ID を持つ要素に書く
 }
 function puery2(){
  var i;
- var input prompt('郵便番号を入力してください", '0640941'); // 入力された文字列
- var output '見つかりませんでした'; // 検索結果を入れる変数
+ var input = prompt('郵便番号を入力してください', '0640941'); // 入力された文字列
+ var output = '見つかりませんでした'; // 検索結果を入れる変数
  var n= zipdb.length; //検索対象の配列の大きさ
  for(i = 0; i < zipdb.length; ++i) {
  if( zipdb[i]['zip'] == input) { // 入力がi番のデータと完全一致かどうか判定
@@ -46,7 +46,7 @@ function puery2(){
  break; // 最も内側の for ループから抜け出す
  }
  }
- document.getElementById('out').innerHTML = result; // 検索結果を out の ID を持つ要素に置く
+ document.getElementById('out').innerHTML = result; // 検索結果を out の ID を持つ要素に書く
 }
     </SCRIPT>
 </BODY>
