@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 from turtle import *
 shape("turtle")
 for i in range(4):
